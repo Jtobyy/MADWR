@@ -19,6 +19,10 @@ export default class App extends React.Component {
     this.setState(prevState => ({showContacts: !prevState.showContacts}))
   }
 
+  toggleForm = () => {
+    this.setState(prevState => ({showForm: !prevState.showForm}))
+  }
+
   sort = () => {
     this.setState(prevState => ({contacts: prevState.contacts.sort(compareNames)}))
   }

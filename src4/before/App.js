@@ -32,7 +32,7 @@ export default class App extends React.Component {
   // we pull up the item from the obj (shortcut)
   // item: {name: String, phone: String, key: Number}
 
-  // both not really used in this App, so we move them to ContactList, where they are
+  // both not really used in this App file, so we move them to ContactList, where they are
   // actually needed
   renderItem = ({item}) => <Row {...item} />
   renderSectionHeader = obj => <Text>{obj.section.title}</Text>
@@ -69,9 +69,7 @@ export default class App extends React.Component {
         }
 
         {/* using section list */}
-        {this.state.showContacts && <ContactList renderItem={this.renderItem}       
-        renderSectionHeader={this.renderSectionHeader}
-        contacts={this.state.contacts}
+        {this.state.showContacts && <ContactList contacts={this.state.contacts}
         />
         }
         
