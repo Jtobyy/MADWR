@@ -14,6 +14,8 @@ const ContactList = props => {
     const firstLetter = contact.name[0].toUpperCase()
     return {
       ...obj, 
+
+      // using computed property name: [firstLetter]
       [firstLetter]: [...(obj[firstLetter] || []), contact],
     }
   }, {})
