@@ -8,6 +8,8 @@ const renderItem = obj => <Row name={obj.item.name} phone={obj.item.phone}/>
 const renderSectionHeader = obj => <Text>{obj.section.title}</Text>// both not really used in this App, so we move them to ContactList, where they are
 
 const ContactList = props => {
+  // prototype for array.reduce is
+  // array.reduce(callback(accumulator, currentValue, currentIndex, array), initialValue)
   const contactsByLetter = props.contacts.reduce((obj, contact) => {
     const firstLetter = contact.name[0].toUpperCase()
     return {
